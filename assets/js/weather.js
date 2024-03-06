@@ -1,5 +1,6 @@
 import { weather_data } from './data.js';
 
+let button = document.getElementById('loadinfo');
 
 let loadDayForecastData = () => {
 	let city = document.getElementById('city');
@@ -88,5 +89,12 @@ let loadWeekForecastData = () => {
 };
 
 
-loadDayForecastData();
-loadWeekForecastData();
+document.addEventListener("DOMContentLoaded", function() {
+    // Llamar a la función loadDayForecastData
+    loadDayForecastData();
+});
+
+button.addEventListener("click", function() {
+    // Llamar a la función loadWeekForecastData
+    loadWeekForecastData();
+});
